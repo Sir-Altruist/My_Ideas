@@ -1,0 +1,15 @@
+<div class="card card-body col-sm-6 mx-auto">
+    <h3 class="mb-3 text-center">Edit Idea</h3>
+    <form action="/ideas/{{idea.id}}?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT" />
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" value="{{idea.title}}" required/>
+    </div>
+     <div class="form-group">
+        <label for="details">Details</label>
+        <textarea class="form-control" name="details" rows="10" required>{{idea.details}}</textarea>
+    </div>
+    <button class="btn btn-primary btn-md" type="submit">Submit</button>
+    </form>
+</div>
